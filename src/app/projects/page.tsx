@@ -1,6 +1,6 @@
 const Projects = () => {
     return (
-        <div>Projects</div>
+        <div className="pt-20">Projects</div>
     )
 }
 export default Projects;
