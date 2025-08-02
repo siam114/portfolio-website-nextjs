@@ -1,6 +1,6 @@
 "use client"
 
-import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
+import { Bars3Icon, MoonIcon, SunIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useState } from 'react'
@@ -38,7 +38,7 @@ const Navbar = () => {
                   )
                 })
               }
-              <button className='p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors'>
+              <button className='p-2 rounded-lg hover:bg-gray-100 text-primary dark:hover:bg-gray-800 transition-colors cursor-pointer'>
                 {
                   theme === 'dark' ? (
                     <SunIcon className='w-5 h-5'/>
@@ -48,6 +48,13 @@ const Navbar = () => {
                 }
               </button>
              </div>
+
+             {/* mobile menu button */}
+             <button onClick={toggleMobileMenu} type='button' className='md:hidden p-2 rounded-lg hover:bg-gray-100 text-primary dark:hover:bg-gray-800 transition-colors cursor-pointer'>
+               {
+                isMobileMenuOpen ? (<XMarkIcon className='w-6 h-6'/>) :(<Bars3Icon className='w-6 h-6'/>)
+               }
+             </button>
           </div>
 
           {/* mobile menu */}
