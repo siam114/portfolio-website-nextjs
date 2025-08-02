@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState } from 'react'
 
 const Navbar = () => {
@@ -15,9 +17,7 @@ const Navbar = () => {
         {href: "/contact", label: "Contact"},
     ]
   return (
-    <div>
-      navbar
-    </div>
+      <nav className='fixed w-full bg-white/80 dark:bg-dark/80 backdrop-blur-sm z-50'>navbar</nav>
   )
 }
 
