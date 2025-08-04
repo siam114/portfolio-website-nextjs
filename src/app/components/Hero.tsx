@@ -4,7 +4,7 @@ import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <section className="py=28 container mx-auto max-w-7xl px-4">
+    <section className="py-10 container mx-auto max-w-7xl px-4">
       <div className="max-w-3xl mx-auto text-center">
         <div className="flex flex-col items-center mb-4">
           <Image
