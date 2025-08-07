@@ -55,7 +55,8 @@ const About = () => {
       </section>
 
       {/* Experience section */}
-      <section className="mb-16">
+
+      {/* <section className="mb-16">
         <h2 className="section-title">Education</h2>
 
         <div className="max-w-3xl mx-auto space-y-8">
@@ -88,7 +89,7 @@ const About = () => {
             </ul>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* educational section */}
       <section className="mb-16">
