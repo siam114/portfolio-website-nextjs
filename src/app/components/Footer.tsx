@@ -11,35 +11,36 @@ const Footer = () => {
             <Link href="/" className="text-xl font-bold text-primary">
               SM SIAM
             </Link>
-            <p className="text-sm text-secondary mt-2">@ {new Date().getFullYear()} SM SIAM. All rights reserved</p>
+            <p className="text-sm text-secondary mt-2">
+              @ {new Date().getFullYear()} SM SIAM. All rights reserved
+            </p>
           </div>
 
-          
-        <div className="flex space-x-6">
-          <Link
-            href="https://github.com/siam114"
-            target="_blank"
-            className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 transition-colors duration-300"
-          >
-            <FaGithub />
-          </Link>
+          <div className="flex space-x-6">
+            <Link
+              href="https://github.com/siam114"
+              target="_blank"
+              className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 transition-colors duration-300"
+            >
+              <FaGithub />
+            </Link>
 
-          <Link
-            href="https://www.linkedin.com/in/sm-siam598"
-            target="_blank"
-            className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 transition-colors duration-300"
-          >
-            <FaLinkedin />
-          </Link>
+            <Link
+              href="https://www.linkedin.com/in/sm-siam598"
+              target="_blank"
+              className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 transition-colors duration-300"
+            >
+              <FaLinkedin />
+            </Link>
 
-          <Link
-            href="https://www.facebook.com/sumsuzzaman.siam"
-            target="_blank"
-            className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 transition-colors duration-300"
-          >
-            <FaFacebook />
-          </Link>
-        </div>
+            <Link
+              href="https://www.facebook.com/sumsuzzaman.siam"
+              target="_blank"
+              className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 transition-colors duration-300"
+            >
+              <FaFacebook />
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
