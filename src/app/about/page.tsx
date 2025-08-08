@@ -8,10 +8,7 @@ const About = () => {
       {/* bio section */}
       <section className="mb-16">
         <p className="text-lg text-secondary max-w-3xl mx-auto text-center">
-          I&apos;m a passionate Full Stack Developer with expertise in building
-          modern web applications. With a strong foundation in both frontend and
-          backend technologies, I create seamless user experiences and robust
-          server-side solutions.
+         I&apos;m SM Sumsuzzaman (SM Siam), a passionate Frontend Developer dedicated to crafting visually stunning and highly functional web applications. My programming journey began with a deep curiosity about web technologies, which led me to master HTML, CSS, JavaScript, and React.js. I specialize in building interactive, user-friendly, and responsive web interfaces.
         </p>
       </section>
 
