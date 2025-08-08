@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { FaEnvelope, FaMapMarkedAlt, FaPhone } from "react-icons/fa";
 
 interface FormData {
@@ -18,6 +18,37 @@ const ContactPage = () => {
     message: "",
   });
   const [status, setStatus] = useState<FormStatus>("idle");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus("loading");
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      setStatus("success");
+      setFormData({ name: "", email: "", message: "" });
+    }catch (error){
+      setStatus("error");
+      console.error("Error sending message:", error);
+    }
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }))
+  }
 
   return (
     <div className="container mx-auto max-w-7xl py-2 md:py-10">
@@ -72,13 +103,15 @@ const ContactPage = () => {
 
         {/* contact form */}
         <div className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md">
-          <form className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-sm font-medium mb-2">
                 Name
               </label>
               <input
                 required
+                value={formData.name}
+                onChange={handleChange}
                 type="text"
                 id="name"
                 name="name"
@@ -93,6 +126,8 @@ const ContactPage = () => {
               </label>
               <input
                 required
+                value={formData.email}
+                onChange={handleChange}
                 type="email"
                 id="email"
                 name="email"
@@ -111,6 +146,8 @@ const ContactPage = () => {
               <textarea
                 rows={4}
                 required
+                value={formData.message}
+                onChange={handleChange}
                 id="message"
                 name="message"
                 placeholder="Enter Your Message"
