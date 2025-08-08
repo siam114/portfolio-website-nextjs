@@ -160,6 +160,22 @@ const ContactPage = () => {
             >
               {status === "loading" ? "Sending..." : "Send Message"}
             </button>
+
+            {
+              status === "success" && (
+                <p className="text-green-500 text-center">
+                  Message sent successfully!
+                </p>
+              )
+            }
+
+            {
+              status === "error" && (
+                <p className="text-red-500 text-center">
+                  Failed to send message. Please try again.
+                </p>
+              )
+            }
           </form>
         </div>
       </div>
