@@ -1,6 +1,24 @@
+"use client";
+
+import { useState } from "react";
 import { FaEnvelope, FaMapMarkedAlt, FaPhone } from "react-icons/fa";
 
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
+type FormStatus = "idle" | "loading" | "success" | "error";
+
 const ContactPage = () => {
+  const [formData, setFormData] = useState<FormData>({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [status, setStatus] = useState<FormStatus>("idle");
+
   return (
     <div className="container mx-auto max-w-7xl py-2 md:py-10">
       <h1 className="text-3xl font-bold text-center mb-16">Contact Me</h1>
@@ -44,10 +62,8 @@ const ContactPage = () => {
               <FaMapMarkedAlt className="w-6 h-6 text-primary" />
               <div>
                 <h3 className="font-semibold">Location</h3>
-                <p
-                  className="text-secondary hover:text-primary"
-                >
-                    Mirpur, Dhaka, Bangladesh
+                <p className="text-secondary hover:text-primary">
+                  Mirpur, Dhaka, Bangladesh
                 </p>
               </div>
             </div>
@@ -58,9 +74,55 @@ const ContactPage = () => {
         <div className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md">
           <form className="space-y-6">
             <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter Your Name" className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-none" />
+              <label htmlFor="name" className="block text-sm font-medium mb-2">
+                Name
+              </label>
+              <input
+                required
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter Your Name"
+                className="w-full px-4 py-2 rounded-md border placeholder:text-white/50 border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-none"
+              />
             </div>
+
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium mb-2">
+                Email
+              </label>
+              <input
+                required
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter Your Email"
+                className="w-full px-4 py-2 placeholder:text-white/50 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-none"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="message"
+                className="block text-sm font-medium mb-2"
+              >
+                Message
+              </label>
+              <textarea
+                rows={4}
+                required
+                id="message"
+                name="message"
+                placeholder="Enter Your Message"
+                className="w-full px-4 py-2 placeholder:text-white/50 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-none"
+              />
+            </div>
+            <button
+              type="submit"
+              className="w-full btn btn-primary cursor-pointer"
+            >
+              {status === "loading" ? "Sending..." : "Send Message"}
+            </button>
           </form>
         </div>
       </div>
