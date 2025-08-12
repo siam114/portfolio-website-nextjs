@@ -10,9 +10,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import { useTheme } from "../context/ThemeContext";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
-  const {theme, toggleTheme} = useTheme();
+  const { theme, toggleTheme } = useTheme();
   const [isMobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
   const pathname = usePathname();
 
@@ -52,19 +53,26 @@ const Navbar = () => {
                 </Link>
               );
             })}
-            <button onClick={toggleTheme} className="p-2 rounded-lg hover:bg-gray-100 dark:text-white hover:text-primary dark:hover:bg-gray-800 transition-colors cursor-pointer">
+            <motion.button
+              onClick={toggleTheme}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="p-2 rounded-lg hover:bg-gray-100 dark:text-white hover:text-primary dark:hover:bg-gray-800 transition-colors cursor-pointer"
+            >
               {theme === "dark" ? (
                 <SunIcon className="w-5 h-5" />
               ) : (
                 <MoonIcon className="w-5 h-5" />
               )}
-            </button>
+            </motion.button>
           </div>
 
           {/* mobile menu button */}
-          <button
+          <motion.button
             onClick={toggleMobileMenu}
             type="button"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
             className="md:hidden p-2 rounded-lg hover:bg-gray-100 text-primary dark:hover:bg-gray-800 transition-colors cursor-pointer"
           >
             {isMobileMenuOpen ? (
@@ -72,7 +80,7 @@ const Navbar = () => {
             ) : (
               <Bars3Icon className="w-6 h-6" />
             )}
-          </button>
+          </motion.button>
         </div>
 
         {/* mobile menu */}
@@ -80,18 +88,31 @@ const Navbar = () => {
           <div className="md:hidden">
             <div className="py-4 space-y-4">
               {menuItems.map((item, index) => (
-                <div key={index} onClick={toggleMobileMenu}>
+                <motion.div
+                  key={item.href}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  onClick={toggleMobileMenu}
+                >
                   <Link
                     href={item.href}
                     className="block py-0.5 hover:text-primary transition-colors"
                   >
                     {item.label}
                   </Link>
-                </div>
+                </motion.div>
               ))}
 
-              <div>
-                <button onClick={toggleTheme} className="flex items-center py-2 hover:text-primary transition-colors">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: menuItems.length * 0.1 }}
+              >
+                <button
+                  onClick={toggleTheme}
+                  className="flex items-center py-2 hover:text-primary transition-colors"
+                >
                   {theme === "dark" ? (
                     <>
                       <SunIcon className="w-5 h-5 mr-2" /> Light Mode
@@ -103,7 +124,7 @@ const Navbar = () => {
                     </>
                   )}
                 </button>
-              </div>
+              </motion.div>
             </div>
           </div>
         )}
