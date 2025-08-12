@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import { FaEnvelope, FaMapMarkedAlt, FaPhone } from "react-icons/fa";
+import { motion } from 'framer-motion';
+import { fadeIn, fadeInUp, slideInLeft, slideInRight } from "@/utils/animation";
 
 interface FormData {
   name: string;
@@ -52,18 +54,24 @@ const ContactPage = () => {
 
   return (
     <div className="container mx-auto max-w-7xl py-2 md:py-10">
-      <h1 className="text-3xl font-bold text-center mb-16">Contact Me</h1>
+      <motion.h1  {...fadeInUp} className="text-3xl font-bold text-center mb-16">Contact Me</motion.h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* contact info */}
-        <div className="space-y-8">
-          <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2>
+        <motion.div   {...slideInLeft} className="space-y-8">
+         <motion.div {...fadeInUp}>
+           <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2>
           <p className="text-secondary md:w-2/3">
             I&apos;m always open to discussing new projects, creative ideas, or
             opportunities to be part of your visions.
           </p>
-          <div className="space-y-6">
-            <div className="flex items-center gap-4">
+         </motion.div>
+          <motion.div variants={fadeIn}
+            initial="initial"
+            animate="animate" className="space-y-6">
+            <motion.div  variants={fadeInUp}
+              whileHover={{ x: 10 }}
+              transition={{ type: "spring", stiffness: 300 }} className="flex items-center gap-4">
               <FaEnvelope className="w-6 h-6 text-primary" />
               <div>
                 <h3 className="font-semibold">Email</h3>
@@ -74,9 +82,11 @@ const ContactPage = () => {
                   smsiam987@gmail.com
                 </a>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="flex items-center gap-4">
+            <motion.div  variants={fadeInUp}
+              whileHover={{ x: 10 }}
+              transition={{ type: "spring", stiffness: 300 }} className="flex items-center gap-4">
               <FaPhone className="w-6 h-6 text-primary" />
               <div>
                 <h3 className="font-semibold">Phone</h3>
@@ -87,9 +97,11 @@ const ContactPage = () => {
                   +8801783030598
                 </a>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="flex items-center gap-4">
+            <motion.div variants={fadeInUp}
+              whileHover={{ x: 10 }}
+              transition={{ type: "spring", stiffness: 300 }} className="flex items-center gap-4">
               <FaMapMarkedAlt className="w-6 h-6 text-primary" />
               <div>
                 <h3 className="font-semibold">Location</h3>
@@ -97,14 +109,16 @@ const ContactPage = () => {
                   Mirpur, Dhaka, Bangladesh
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
 
         {/* contact form */}
-        <div className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
+        <motion.div  {...slideInRight} className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md">
+          <motion.form  variants={fadeIn}
+            initial="initial"
+            animate="animate" onSubmit={handleSubmit} className="space-y-6">
+            <motion.div  variants={fadeInUp}>
               <label htmlFor="name" className="block text-sm font-medium mb-2">
                 Name
               </label>
@@ -118,9 +132,9 @@ const ContactPage = () => {
                 placeholder="Enter Your Name"
                 className="w-full px-4 py-2 rounded-md border placeholder:text-white/50 border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-none"
               />
-            </div>
+            </motion.div>
 
-            <div>
+            <motion.div  variants={fadeInUp}>
               <label htmlFor="email" className="block text-sm font-medium mb-2">
                 Email
               </label>
@@ -134,9 +148,9 @@ const ContactPage = () => {
                 placeholder="Enter Your Email"
                 className="w-full px-4 py-2 placeholder:text-white/50 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-none"
               />
-            </div>
+            </motion.div>
 
-            <div>
+            <motion.div  variants={fadeInUp}>
               <label
                 htmlFor="message"
                 className="block text-sm font-medium mb-2"
@@ -153,31 +167,36 @@ const ContactPage = () => {
                 placeholder="Enter Your Message"
                 className="w-full px-4 py-2 placeholder:text-white/50 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-none"
               />
-            </div>
-            <button
+            </motion.div>
+            <motion.button
               type="submit"
+               disabled={status === 'loading'}
+                whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               className="w-full btn btn-primary cursor-pointer"
             >
               {status === "loading" ? "Sending..." : "Send Message"}
-            </button>
+            </motion.button>
 
             {
               status === "success" && (
-                <p className="text-green-500 text-center">
+                <motion.p  initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }} className="text-green-500 text-center">
                   Message sent successfully!
-                </p>
+                </motion.p>
               )
             }
 
             {
               status === "error" && (
-                <p className="text-red-500 text-center">
+                <motion.p  initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }} className="text-red-500 text-center">
                   Failed to send message. Please try again.
-                </p>
+                </motion.p>
               )
             }
-          </form>
-        </div>
+          </motion.form>
+        </motion.div>
       </div>
     </div>
   );
