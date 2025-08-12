@@ -3,15 +3,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
-import { motion } from 'framer-motion';
-import { scaleIn } from "@/utils/animation";
+import { motion } from "framer-motion";
+import { fadeIn, fadeInUp, scaleIn } from "@/utils/animation";
 
 const Hero = () => {
   return (
     <section className="py-10 container mx-auto max-w-7xl px-4">
-      <div
-      className="max-w-3xl mx-auto text-center">
-        <motion.div {...scaleIn} transition={{delay: 0.4}} className="flex flex-col items-center mb-4">
+      <div className="max-w-3xl mx-auto text-center">
+        <motion.div
+          {...scaleIn}
+          transition={{ delay: 0.2 }}
+          className="flex flex-col items-center mb-4"
+        >
           <Image
             src="/siam.jpg"
             alt="Profile Photo"
@@ -21,38 +24,57 @@ const Hero = () => {
           />
         </motion.div>
 
-        <h1 className="text-2xl md:text-4xl font-bold mb-4">
-          Hi, I&apos;m <span className="text-primary"> SM Sumsuzzaman</span>
-        </h1>
-        <p className="text-sm md:text-lg text-gray-600 dark:text-gray-300 mb-8">
+        <motion.h1
+          {...fadeInUp}
+          transition={{ delay: 0.3 }}
+          className="text-2xl md:text-4xl font-bold mb-4"
+        >
+          Hi, I&apos;m <motion.span  {...fadeIn}
+              transition={{ delay: 0.8 }} className="text-primary"> SM Sumsuzzaman</motion.span>
+        </motion.h1>
+        <motion.p
+          {...fadeInUp}
+          transition={{ delay: 0.5 }}
+          className="text-sm md:text-lg text-gray-600 dark:text-gray-300 mb-8"
+        >
           Frontend Developer | MERN Developer | Open Source Contributor
-        </p>
+        </motion.p>
 
-        <div className="flex justify-center space-x-4 mb-8">
-          <Link
+        <motion.div  {...fadeInUp}
+            transition={{ delay: 0.5 }} className="flex justify-center space-x-4 mb-8">
+          <motion.a
             href="https://github.com/siam114"
             target="_blank"
+            rel="noopener noreferrer"
+             whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
             className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 transition-colors duration-300"
           >
             <FaGithub />
-          </Link>
+          </motion.a>
 
-          <Link
+          <motion.a
             href="https://www.linkedin.com/in/sm-siam598"
             target="_blank"
+             rel="noopener noreferrer"
+             whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
             className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 transition-colors duration-300"
           >
             <FaLinkedin />
-          </Link>
+          </motion.a>
 
-          <Link
+          <motion.a
             href="https://www.facebook.com/sumsuzzaman.siam"
             target="_blank"
+             rel="noopener noreferrer"
+             whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
             className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 transition-colors duration-300"
           >
             <FaFacebook />
-          </Link>
-        </div>
+          </motion.a>
+        </motion.div>
 
         <div className="flex flex-col md:flex-row justify-center gap-4">
           <Link
