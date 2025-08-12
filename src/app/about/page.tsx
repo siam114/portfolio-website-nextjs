@@ -1,21 +1,27 @@
+"use client";
 import { FaCode, FaLaptopCode, FaToolbox } from "react-icons/fa";
+import { motion } from 'framer-motion';
+import { fadeIn, fadeInDown, fadeInUp, staggerContainer } from "@/utils/animation";
 
 const About = () => {
   return (
     <div className="container mx-auto max-w-7xl py-10">
-      <h1 className="text-3xl font-bold text-center mb-10">About Me</h1>
+      <motion.h1  {...fadeInDown} className="text-3xl font-bold text-center mb-10">About Me</motion.h1>
 
       {/* bio section */}
-      <section className="mb-16">
+      <motion.section  {...fadeInUp} className="mb-16">
         <p className="text-lg text-secondary max-w-3xl mx-auto text-center">
          I&apos;m SM Sumsuzzaman (SM Siam), a passionate Frontend Developer dedicated to crafting visually stunning and highly functional web applications. My programming journey began with a deep curiosity about web technologies, which led me to master HTML, CSS, JavaScript, and React.js. I specialize in building interactive, user-friendly, and responsive web interfaces.
         </p>
-      </section>
+      </motion.section>
 
       {/* skill section */}
-      <section className="mb-16">
-        <h2 className="section-title">Skills</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <motion.section    {...fadeIn}
+        transition={{ delay: 0.2 }} className="mb-16">
+        <motion.h2  {...fadeInUp} className="section-title">Skills</motion.h2>
+        <motion.div variants={staggerContainer}
+          initial="initial"
+          animate="animate" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md ">
             <FaCode className="h-8 w-8 text-primary mb-4" />
             <h3 className="text-xl font-semibold mb-2">Frontend</h3>
@@ -48,16 +54,21 @@ const About = () => {
               <li>Figma / Pixso</li>
             </ul>
           </div>
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
 
       {/* Experience section */}
 
-      {/* <section className="mb-16">
-        <h2 className="section-title">Education</h2>
+      {/* <motion.section  className="mb-16"
+        {...fadeIn}
+        transition={{ delay: 0.4 }} className="mb-16">
+        <motion.h2  {...fadeInUp} className="section-title">Education</motion.h2>
 
-        <div className="max-w-3xl mx-auto space-y-8">
-          <div className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md">
+        <notion.div   variants={staggerContainer}
+          initial="initial"
+          animate="animate" className="max-w-3xl mx-auto space-y-8">
+          <motion.div  variants={fadeInUp}
+            {...cardHoverSmall} className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold mb-2">
               Senior Full Stack Developer
             </h3>
@@ -72,8 +83,9 @@ const About = () => {
               </li>
               <li>Mentored junior developers and conducted code reviews</li>
             </ul>
-          </div>
-          <div className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md">
+          </motion.div>
+          <motion.div  variants={fadeInUp}
+            {...cardHoverSmall} className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold mb-2">Full Stack Developer</h3>
             <p className="text-primary mb-2">Previous Company • 2018 - 2020</p>
             <ul className="text-secondary list-disc list-inside space-y-2">
@@ -84,15 +96,18 @@ const About = () => {
               </li>
               <li>Optimized database queries improving performance by 40%</li>
             </ul>
-          </div>
-        </div>
-      </section> */}
+          </motion.div>
+        </notion.div>
+      </motion.section> */}
 
       {/* educational section */}
-      <section className="mb-16">
-        <h2 className="section-title">Education</h2>
+      <motion.section  {...fadeIn}
+        transition={{ delay: 0.6 }} className="mb-16">
+        <motion.h2 {...fadeInUp} className="section-title">Education</motion.h2>
 
-        <div className="max-w-3xl mx-auto space-y-8">
+        <motion.div   variants={staggerContainer}
+          initial="initial"
+          animate="animate" className="max-w-3xl mx-auto space-y-8">
           <div className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold mb-2">
               Bachelor of Science in Computer Science
@@ -105,8 +120,8 @@ const About = () => {
               development.
             </p>
           </div>
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
     </div>
   );
 };

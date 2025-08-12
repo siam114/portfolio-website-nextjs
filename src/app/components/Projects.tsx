@@ -2,7 +2,6 @@
 import { projects } from "@/content/project";
 import { fadeInUp, staggerContainer } from "@/utils/animation";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { motion } from 'framer-motion';
