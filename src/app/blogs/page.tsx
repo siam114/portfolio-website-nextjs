@@ -1,13 +1,20 @@
+"use client";
 import { blogs } from "@/content/blog";
 import Link from "next/link";
 import { FaCalendarAlt, FaClock } from "react-icons/fa";
+import { motion } from 'framer-motion';
+import { staggerContainer } from "@/utils/animation";
 
 const Blogs = () => {
   return (
     <div className="container mx-auto max-w-7xl py-2 md:py-10">
-      <h1 className="text-3xl font-bold text-center mb-10">Blog Posts</h1>
+      <motion.h1  initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }} className="text-3xl font-bold text-center mb-10">Blog Posts</motion.h1>
 
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10'>
+      <motion.div variants={staggerContainer}
+        initial="initial"
+        animate="animate" className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10'>
         {
             blogs.map((blog) => (
                 <article key={blog.slug} className='bg-white dark:bg-dark/50 rounded-lg shadow-md p-6'>
@@ -28,7 +35,7 @@ const Blogs = () => {
                 </article>
             ))
         }
-      </div>
+      </motion.div>
     </div>
   );
 };
