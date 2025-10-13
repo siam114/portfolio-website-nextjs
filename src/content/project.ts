@@ -2,8 +2,8 @@ import { Project } from "@/types";
 
 export const projects: Project[] = [
     {
-        title: 'E-commerce Platform',
-        description: 'A full-stack e-commerce platform built with Next.js, TypeScript, and Tailwind CSS.',
+        title: 'Real Estate Platform',
+        description: 'A full-stack real estate platform built with React, Express, Node, and Tailwind CSS.',
         technologies: ['React', 'Firebase', 'Tailwind CSS', 'Stripe'],
         githubLink: 'https://github.com/siam114/EstateHive',
         demoLink: 'https://estatehive-357ff.web.app/',
