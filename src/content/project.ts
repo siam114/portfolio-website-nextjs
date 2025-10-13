@@ -6,7 +6,7 @@ export const projects: Project[] = [
         description: 'A full-stack e-commerce platform built with Next.js, TypeScript, and Tailwind CSS.',
         technologies: ['React', 'Firebase', 'Tailwind CSS', 'Stripe'],
         githubLink: 'https://github.com',
-        demoLink: 'https://demo.com',
+        demoLink: 'https://estatehive-357ff.web.app/',
         image: '/projects/e-commerce-website.png',
       },
       {
