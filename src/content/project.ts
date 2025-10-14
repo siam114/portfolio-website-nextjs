@@ -10,7 +10,7 @@ export const projects: Project[] = [
         image: '/projects/e-commerce-website.png',
       },
       {
-        title: 'Task Management App',
+        title: 'QuickChat App',
         description: 'A collaborative task management application with real-time updates.',
         technologies: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
         githubLink: 'https://github.com',
