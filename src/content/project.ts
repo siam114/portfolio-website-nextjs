@@ -15,7 +15,7 @@ export const projects: Project[] = [
         technologies: ['Node.js', 'mongoose', "bcrypt", 'Socket.io'],
         githubLink: 'https://github.com/siam114/Chat-App',
         demoLink: 'https://chat-app-gamma-six-33.vercel.app/login',
-        image: '/projects/task-manager.webp',
+        image: '/projects/quickapp.png',
       },
       {
         title: 'Portfolio Website',
