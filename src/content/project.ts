@@ -11,7 +11,7 @@ export const projects: Project[] = [
       },
       {
         title: 'QuickChat App',
-        description: 'A collaborative task management application with real-time updates.',
+        description: 'QuickChat is a real-time chat app using Socket.io for instant, smooth messaging.',
         technologies: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
         githubLink: 'https://github.com/siam114/Chat-App',
         demoLink: 'https://chat-app-gamma-six-33.vercel.app/login',
