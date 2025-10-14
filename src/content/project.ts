@@ -13,7 +13,7 @@ export const projects: Project[] = [
         title: 'QuickChat App',
         description: 'A collaborative task management application with real-time updates.',
         technologies: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
-        githubLink: 'https://github.com',
+        githubLink: 'https://github.com/siam114/Chat-App',
         demoLink: 'https://chat-app-gamma-six-33.vercel.app/login',
         image: '/projects/task-manager.webp',
       },
