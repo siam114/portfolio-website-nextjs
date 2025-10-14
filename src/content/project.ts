@@ -14,7 +14,7 @@ export const projects: Project[] = [
         description: 'A collaborative task management application with real-time updates.',
         technologies: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
         githubLink: 'https://github.com',
-        demoLink: 'https://demo.com',
+        demoLink: 'https://chat-app-gamma-six-33.vercel.app/login',
         image: '/projects/task-manager.webp',
       },
       {
