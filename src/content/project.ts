@@ -20,7 +20,7 @@ export const projects: Project[] = [
       {
         title: 'SportAxis Website',
         description: 'SportAxis delivers real-time sports updates with a fast and intuitive cross-device experience.',
-        technologies: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
+        technologies: ['React', "Firebase", "mongoDB", 'node.js'],
         githubLink: 'https://github.com/siam114/sportsAxios',
         demoLink: 'https://sportaxis-project.web.app/',
         image: '/projects/portfolio-website.jpg',
