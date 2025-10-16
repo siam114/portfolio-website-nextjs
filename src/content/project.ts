@@ -29,7 +29,7 @@ export const projects: Project[] = [
         title: 'QueyMate Website',
         description: 'A blogging platform with user authentication and markdown support.',
         technologies: ['Gatsby', 'GraphQL', 'Contentful'],
-        githubLink: 'https://github.com',
+        githubLink: 'https://github.com/siam114/QueyMate-',
         demoLink: 'https://querymate-project.web.app/',
         image: '/projects/blog-website.jpeg',
       },
