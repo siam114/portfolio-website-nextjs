@@ -31,7 +31,7 @@ export const projects: Project[] = [
         technologies: ['Gatsby', 'GraphQL', 'Contentful'],
         githubLink: 'https://github.com/siam114/QueyMate-',
         demoLink: 'https://querymate-project.web.app/',
-        image: '/projects/blog-website.jpeg',
+        image: '/projects',
       },
       {
         title: 'Weather App',
