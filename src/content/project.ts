@@ -26,7 +26,7 @@ export const projects: Project[] = [
         image: '/projects/sportaxis.png',
       },
       {
-        title: 'Blog Platform',
+        title: 'QueyMate Website',
         description: 'A blogging platform with user authentication and markdown support.',
         technologies: ['Gatsby', 'GraphQL', 'Contentful'],
         githubLink: 'https://github.com',
