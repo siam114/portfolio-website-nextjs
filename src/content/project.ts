@@ -23,7 +23,7 @@ export const projects: Project[] = [
         technologies: ['React', "Firebase", "mongoDB", 'node.js'],
         githubLink: 'https://github.com/siam114/sportsAxios',
         demoLink: 'https://sportaxis-project.web.app/',
-        image: '/projects/portfolio-website.jpg',
+        image: '/projects/sportaxis.png',
       },
       {
         title: 'Blog Platform',
