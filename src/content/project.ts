@@ -7,7 +7,7 @@ export const projects: Project[] = [
         technologies: ['React', 'Firebase', 'Tailwind CSS', 'Stripe'],
         githubLink: 'https://github.com/siam114/EstateHive',
         demoLink: 'https://estatehive-357ff.web.app/',
-        image: '/projects/e-commerce-website.png',
+        image: '/projects/estatehive.png',
       },
       {
         title: 'QuickChat App',
