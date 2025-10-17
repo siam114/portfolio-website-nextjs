@@ -39,7 +39,7 @@ export const projects: Project[] = [
         technologies: ['React', 'Tailwind CSS', 'DaisyUI'],
         githubLink: 'https://github.com/siam114/job-portal',
         demoLink: 'https://job-portal-462b3.web.app/',
-        image: '/projects/weather-app.png',
+        image: '/projects/job portal.png',
       },
       {
         title: 'Chat Application',
