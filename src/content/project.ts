@@ -28,7 +28,7 @@ export const projects: Project[] = [
       {
         title: 'QueyMate Website',
         description: 'QueyMate offers real-time data, custom search, secure login, and mobile-friendly interface.',
-        technologies: ['Gatsby', 'GraphQL', 'Contentful'],
+        technologies: ['React', "Firebase", "mongoDB", 'node.js'],
         githubLink: 'https://github.com/siam114/QueyMate-',
         demoLink: 'https://querymate-project.web.app/',
         image: '/projects/querymate.png',
