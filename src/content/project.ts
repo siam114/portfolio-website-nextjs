@@ -35,7 +35,7 @@ export const projects: Project[] = [
       },
       {
         title: 'Job Portal Website',
-        description: 'A weather application that provides real-time weather updates.',
+        description: 'A modern job portal helping users find and apply for jobs with an intuitive interface.',
         technologies: ['React', 'Tailwind CSS', 'DaisyUI'],
         githubLink: 'https://github.com/siam114/job-portal',
         demoLink: 'https://job-portal-462b3.web.app/',
