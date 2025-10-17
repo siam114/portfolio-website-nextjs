@@ -37,7 +37,7 @@ export const projects: Project[] = [
         title: 'Weather App',
         description: 'A weather application that provides real-time weather updates.',
         technologies: ['React', 'OpenWeatherMap API'],
-        githubLink: 'https://github.com',
+        githubLink: 'https://github.com/siam114/job-portal',
         demoLink: 'https://demo.com',
         image: '/projects/weather-app.png',
       },
