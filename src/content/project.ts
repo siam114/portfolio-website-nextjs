@@ -34,7 +34,7 @@ export const projects: Project[] = [
         image: '/projects/querymate.png',
       },
       {
-        title: 'Weather App',
+        title: 'Job Portal Website',
         description: 'A weather application that provides real-time weather updates.',
         technologies: ['React', 'OpenWeatherMap API'],
         githubLink: 'https://github.com/siam114/job-portal',
