@@ -47,7 +47,7 @@ export const projects: Project[] = [
         technologies: ['React', 'Node.js', 'Socket.io'],
         githubLink: 'https://github.com/siam114/Career-Counseling-project',
         demoLink: 'https://careerguide-project.web.app/',
-        image: '/projects/chat-app.png',
+        image: '/projects/Career.png',
       },
       {
         title: 'Recipe Finder',
