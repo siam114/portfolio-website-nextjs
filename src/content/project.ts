@@ -42,7 +42,7 @@ export const projects: Project[] = [
         image: '/projects/job portal.png',
       },
       {
-        title: 'Chat Application',
+        title: 'CareerGuide Website',
         description: 'A real-time chat application using WebSocket technology.',
         technologies: ['React', 'Node.js', 'Socket.io'],
         githubLink: 'https://github.com/siam114/Career-Counseling-project',
