@@ -44,7 +44,7 @@ export const projects: Project[] = [
       {
         title: 'CareerGuide Website',
         description: 'A real-time chat application using WebSocket technology.',
-        technologies: ['React', 'Node.js', 'Socket.io'],
+        technologies: ['React', 'Tailwind CSS', 'DaisyUI'],
         githubLink: 'https://github.com/siam114/Career-Counseling-project',
         demoLink: 'https://careerguide-project.web.app/',
         image: '/projects/Career.png',
