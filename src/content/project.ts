@@ -50,7 +50,7 @@ export const projects: Project[] = [
         image: '/projects/Career.png',
       },
       {
-        title: 'Recipe Finder',
+        title: 'Dragon News Category',
         description: 'A recipe search application using the Edamam API.',
         technologies: ['React', 'Edamam API'],
         githubLink: 'https://github.com',
