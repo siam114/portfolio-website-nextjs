@@ -51,7 +51,7 @@ export const projects: Project[] = [
       },
       {
         title: 'Dragon News Category',
-        description: 'A recipe search application using the Edamam API.',
+        description: 'Dragon-News: Fast, reliable platform delivering real-time local and international updates.',
         technologies: ['React', 'NodeJS', 'Vercel'],
         githubLink: 'https://github.com/siam114/Dragon-news',
         demoLink: 'https://dragon-news-7104a.web.app/category/01',
