@@ -55,7 +55,7 @@ export const projects: Project[] = [
         technologies: ['React', 'NodeJS', 'Vercel'],
         githubLink: 'https://github.com/siam114/Dragon-news',
         demoLink: 'https://dragon-news-7104a.web.app/category/01',
-        image: '/projects/recipe-finder.png',
+        image: '/projects/dragon.png',
       },
       {
         title: 'Expense Tracker',
