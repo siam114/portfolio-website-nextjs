@@ -54,7 +54,7 @@ export const projects: Project[] = [
         description: 'A recipe search application using the Edamam API.',
         technologies: ['React', 'Edamam API'],
         githubLink: 'https://github.com/siam114/Dragon-news',
-        demoLink: 'https://demo.com',
+        demoLink: 'https://dragon-news-7104a.web.app/category/01',
         image: '/projects/recipe-finder.png',
       },
       {
