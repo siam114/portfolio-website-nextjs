@@ -62,7 +62,7 @@ export const projects: Project[] = [
         description: 'A personal finance tracker to manage expenses and income.',
         technologies: ['React', 'Firebase'],
         githubLink: 'https://github.com',
-        demoLink: 'https://demo.com',
+        demoLink: 'https://software-chamber-portfolio-website.vercel.app/',
         image: '/projects/expense-tracker.webp',
       }
   ];
