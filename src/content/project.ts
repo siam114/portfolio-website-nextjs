@@ -59,7 +59,7 @@ export const projects: Project[] = [
       },
       {
         title: 'Software Chamber Portfolio',
-        description: 'A personal finance tracker to manage expenses and income.',
+        description: 'Software Chamber is a modern portfolio showcasing innovative projects.',
         technologies: ['React', 'Typescript', 'Next.js', 'Tailwind CSS'],
         githubLink: 'https://github.com/siam114/software-chamber-portfolio-website',
         demoLink: 'https://software-chamber-portfolio-website.vercel.app/',
