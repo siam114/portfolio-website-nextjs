@@ -63,6 +63,6 @@ export const projects: Project[] = [
         technologies: ['React', 'Typescript', 'Next.js', 'Tailwind CSS'],
         githubLink: 'https://github.com/siam114/software-chamber-portfolio-website',
         demoLink: 'https://software-chamber-portfolio-website.vercel.app/',
-        image: '/projects/expense-tracker.webp',
+        image: '/projects/chamber.png',
       }
   ];
