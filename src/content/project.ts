@@ -58,7 +58,7 @@ export const projects: Project[] = [
         image: '/projects/dragon.png',
       },
       {
-        title: 'Expense Tracker',
+        title: 'Software Chamber Portfolio',
         description: 'A personal finance tracker to manage expenses and income.',
         technologies: ['React', 'Typescript', 'Next.js', 'Tailwind CSS'],
         githubLink: 'https://github.com/siam114/software-chamber-portfolio-website',
